@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(morgan("dev"));
-
+app.use(express.json());
 app.use(paymentRoutes);
 
 app.use(express.static(path.resolve("./src/public")));
